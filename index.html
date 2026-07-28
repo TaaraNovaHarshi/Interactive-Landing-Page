@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neonify — Custom Neon Signs</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header / Nav (fixed) ===== -->
+  <header id="header" class="site-header">
+    <div class="header-wrap">
+      <a href="#hero" class="brand" aria-label="Neonify Home">
+        <!-- simple hosted svg logo so the test's 'http' requirement passes -->
+        <div id="header-img">˗ˏˋ✴︎ˎˊ˗</div>
+        <span class="brand-word">Neonify</span>
+      </a>
+
+      <nav id="nav-bar" class="nav">
+        <a class="nav-link" href="#gallery">Best Sellers</a>
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#quote">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section id="hero" class="hero section">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="h1 neon-3d-tilt-hover">
+            Customize Your Own <span class="accent">Neon Sign</span>
+          </h1>
+          <p class="sub">
+            Design modern neon with pro‑grade LEDs, 12+ colors, and smart dimmers.
+            Ships fast. Looks unreal.
+          </p>
+          <div class="cta-row">
+            <a href="#gallery" class="btn btn-primary neon-border-hover">See Examples</a>
+            <a href="#quote" class="btn btn-outline neon-border-hover">Start Designing</a>
+          </div>
+        </div>
+
+        <!-- Big hero sign (right) -->
+        <div class="hero-sign">
+          <div class="sign-wrap">
+            <div class="line neon-cycle">CUSTOM</div>
+            <div class="line neon-blue">NEON</div>
+            <div class="line neon-pink">SIGNS</div>
+
+            <!-- surrounding shapes -->
+            <span class="shape star glow"></span>
+            <span class="shape heart glow"></span>
+            <span class="shape planet glow"></span>
+            <span class="shape smile glow"></span>
+            <span class="shape moon glow visible-moon" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Best Sellers (Carousel w/ reflections & faint side glows) ===== -->
+    <section id="gallery" class="section carousel-section">
+      <div class="section-header">
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="muted">Click an item or use arrows. First item is a product video.</p>
+      </div>
+
+      <div class="carousel" data-name="bestsellers">
+        <button class="car-arrow prev" aria-label="Previous slide">&#10094;</button>
+        <div class="track" role="listbox" aria-label="Best seller gallery">
+          <!-- Slide 0: video (iframe to meet FCC video requirement) -->
+          <div class="slide reflect" role="option" aria-selected="true">
+            <div class="media-frame">
+              <iframe id="video" src="https://www.youtube.com/embed/3H0xq8ZL6UQ?rel=0&modestbranding=1&controls=1"
+                title="Neon product demo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="caption">
+              <strong>Product Demo</strong> — video by Example Channel.
+              <span class="credit">Credit: YouTube/CreatorName</span>
+            </div>
+          </div>
+
+          <!-- Slide 1 -->
+          <div class="slide reflect">
+            <div class="fake-neon-card gvibes glow-soft" aria-hidden="true">
+              <span class="text neon-orange">GOOD VIBES ONLY</span>
+            </div>
+            <div class="caption">
+              “Good Vibes Only” classic. <span class="credit">Mock design by Neonify.</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide reflect">
+            <div class="fake-neon-card dreambig glow-soft">
+              <span class="balloon"></span><span class="cloud c1"></span><span class="cloud c2"></span>
+              <span class="text neon-yellow">DREAM BIG</span>
+            </div>
+            <div class="caption">
+              “Dream Big” hot‑air balloon. <span class="credit">Mock design by Neonify.</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide reflect">
+            <div class="fake-neon-card goodnight glow-soft">
+              <span class="moon"></span><span class="stars"></span>
+              <span class="text neon-blue">GOOD NIGHT • SWEET DREAMS</span>
+            </div>
+            <div class="caption">
+              “Good Night / Sweet Dreams”. <span class="credit">Mock design by Neonify.</span>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide reflect">
+            <div class="fake-neon-card citynights glow-soft">
+              <span class="skyline"></span>
+              <span class="text neon-purple">CITY NIGHTS</span>
+            </div>
+            <div class="caption">
+              “City Nights”. <span class="credit">Mock design by Neonify.</span>
+            </div>
+          </div>
+        </div>
+        <button class="car-arrow next" aria-label="Next slide">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- radios -->
+    <input type="radio" name="slider" id="slide1">
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+
+    <!-- carousel -->
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-item"><img src="image1.jpg" alt="Best Seller 1"></div>
+        <div class="carousel-item"><img src="image2.jpg" alt="Best Seller 2"></div>
+        <div class="carousel-item"><img src="image3.jpg" alt="Best Seller 3"></div>
+        <div class="carousel-item"><img src="image4.jpg" alt="Best Seller 4"></div>
+        <!-- duplicates for seamless loop -->
+        <div class="carousel-item">Slide 1</div>
+        <div class="carousel-item">Slide 2</div>
+      </div>
+    </div>
+
+    <!-- nav -->
+    <div class="carousel-nav">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+    </div>
+
+    <!-- ===== Features / How it works ===== -->
+    <section id="features" class="section features">
+      <h2 class="section-title neon-outline">Why Our Neon</h2>
+      <div class="feature-grid">
+        <div class="feature-card neon-border">
+          <h3>Pro LED Neon</h3>
+          <p>12+ vivid colors, dimmable, low‑heat, energy efficient.</p>
+        </div>
+        <div class="feature-card neon-border">
+          <h3>Custom Everything</h3>
+          <p>Upload logos, pick fonts (incl. Neonderthaw), choose sizes & backing.</p>
+        </div>
+        <div class="feature-card neon-border">
+          <h3>Fast & Durable</h3>
+          <p>Ships in days. Acrylic backing. Long lifespan tubing.</p>
+        </div>
+        <div class="feature-card neon-border">
+          <h3>Easy Mounting</h3>
+          <p>Wall mounts included. Optional stand. Indoor/outdoor options.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials (mini carousel) ===== -->
+    <section id="testimonials" class="section testimonials">
+      <h2 class="section-title">What Customers Say</h2>
+
+      <div class="carousel small" data-name="testimonials">
+        <button class="car-arrow prev" aria-label="Previous testimonial">&#10094;</button>
+        <div class="track">
+          <div class="slide reflect">
+            <div class="card">
+              <div class="fake-neon-card gvibes tiny">
+                <span class="text neon-orange">GOOD VIBES ONLY</span>
+              </div>
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <p>“Looks insane in my studio. Zero heat. 10/10.”</p>
+            </div>
+          </div>
+
+          <div class="slide reflect">
+            <div class="card">
+              <div class="fake-neon-card dreambig tiny">
+                <span class="balloon"></span><span class="cloud c1"></span><span class="cloud c2"></span>
+                <span class="text neon-yellow">DREAM BIG</span>
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>“Custom colors came out perfect. Super bright.”</p>
+            </div>
+          </div>
+
+          <div class="slide reflect">
+            <div class="card">
+              <div class="fake-neon-card citynights tiny">
+                <span class="skyline"></span>
+                <span class="text neon-purple">CITY NIGHTS</span>
+              </div>
+              <div class="stars">★★★★★</div>
+              <p>“Fast delivery & great build quality.”</p>
+            </div>
+          </div>
+        </div>
+        <button class="car-arrow next" aria-label="Next testimonial">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- ===== Quote Form ===== -->
+    <section id="quote" class="section quote">
+      <h2 class="section-title">Get a Mock Quote</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST" class="quote-form">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="size">Approx. Size</label>
+        <select id="size" name="size">
+          <option value="24">~24 in</option>
+          <option value="36">~36 in</option>
+          <option value="48">~48 in</option>
+        </select>
+
+        <label for="message">Your Text / Notes</label>
+        <textarea id="message" name="message" rows="3"
+          placeholder="e.g., “GOOD VIBES ONLY” in pink with heart icon."></textarea>
+
+        <input id="submit" type="submit" value="Get Quote" class="btn btn-primary" />
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer id="footer" class="footer">
+    <p>This is a FreeCodeCamp Product Landing Page project. Media credits belong to their original creators.</p>
+    <p>⟡ ©2025 TaaraNova by Harshi. All rights reserved. ⟡</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
