@@ -1,2 +1,3 @@
 # Interactive-Landing-Page
-Interactive Landing Page made for FreeCodeCamp's Responsive Web Design Course
+
+Interactive landing page made for freeCodeCamp's Responsive Web Design Certification
